@@ -1,4 +1,5 @@
 import { defineConfig } from '@playwright/test';
+import 'dotenv/config';
 
 export default defineConfig({
   testDir: './tests',
@@ -8,7 +9,7 @@ export default defineConfig({
   reporter: 'html',
 
   use: {
-    headless: true, // browser visible
+    headless: true,
     trace: 'on',
     viewport: null,
     screenshot: 'only-on-failure',
@@ -18,6 +19,6 @@ export default defineConfig({
       args: ['--start-maximized'],
     },
 
-    baseURL: 'https://app.staging.aerosimple.com/',
+    baseURL: process.env.BASE_URL,
   },
 });

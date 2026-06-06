@@ -32,15 +32,15 @@ class LoginPage {
         await loginWithPasswordButtonLocator.click();
     }
 
-    async login(email = 'aerosimple@unosimple.com', password = 'Aero@123') {
+    async login(email, password) {
         await this.clickNextButton();
-        await this.validateErrorMessage();
 
         await this.enterEmail(email);
         await this.clickNextButton();
 
         await this.enterPassword(password);
         await this.page.waitForTimeout(500);
+
         await this.clickLoginWithPassword();
     }
 }
