@@ -25,3 +25,4 @@ export const loginPage = (page) => ({
         page.getByText('Login with Password', { exact: true })
     ]
 });
+
