@@ -21,7 +21,7 @@ export const loginPage = (page) => ({
     ],
 
     loginwithpasswordButton: [
-        page.getByRole('button', { name: 'Login with Password' }),
-        page.getByText('Login with Password', { exact: true })
+        page.getByRole('button', { name: 'Login with Password12' }),
+        page.getByText('Login with Password12', { exact: true })
     ]
 });
